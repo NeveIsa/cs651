@@ -1,0 +1,27 @@
+!
+! Zebra configuration saved from vty
+!   2019/10/05 13:47:10
+!
+hostname G4_SEAT
+password G4_SEAT
+log file /var/log/quagga/ospfd_G4_SEAT.log
+!
+!
+!
+interface host
+!
+interface lo
+!
+interface losa
+ ip ospf cost 1342
+!
+interface salt
+ ip ospf cost 913
+!
+router ospf
+ network 4.0.12.2/24 area 0.0.0.0
+ network 4.0.13.2/24 area 0.0.0.0
+ network 4.109.0.2/24 area 0.0.0.0
+!
+line vty
+!
